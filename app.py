@@ -3,11 +3,13 @@
 import os
 from flask import Flask
 
+from db import conn
+
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Gunn Assassins.'
+    return 'Assassin'
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

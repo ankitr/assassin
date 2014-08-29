@@ -5,7 +5,7 @@ from flask import Flask
 
 from db import conn
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='')
 
 @app.route('/')
 def hello():

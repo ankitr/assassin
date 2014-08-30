@@ -2,12 +2,13 @@
 
 import os
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__, static_folder='static', static_url_path='')
 
 @app.route('/')
-def hello():
-    return 'Assassin'
+def main():
+    return render_template('main.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

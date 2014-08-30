@@ -1,1 +1,33 @@
-/* TODO(hardmath123): this */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    width: 40em;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+a {
+    color: #15a;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

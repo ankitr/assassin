@@ -1,4 +1,4 @@
-Gunn Assassins' Guild
+Gunn Sporkers' Guild
 =====================
 
-This is the website for the [Gunn Assassins' Guild](http://assassins.gunnapps.com/).
+This is the website for the [Gunn Sporkers' Guild](http://spork.gunnapps.com/).

@@ -5,6 +5,8 @@
 }
 
 body {
+    background-color: #000;
+    color: #fff;
     margin: 0px;
     padding: 0px;
     font-family: Lato, sans-serif;
@@ -25,7 +27,7 @@ h1 {
 }
 
 a {
-    color: #15a;
+    color: #00CDCD;
     text-decoration: none;
 }
 a:hover {

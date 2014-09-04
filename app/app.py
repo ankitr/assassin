@@ -3,7 +3,10 @@
 import os
 
 from flask import Flask
+from flask import make_response
 from flask import render_template
+
+from lxml import etree
 
 app = Flask(__name__, static_folder='static', static_url_path='')
 
@@ -16,6 +19,22 @@ def main():
         # :O
         registrants = 420
     return render_template('main.html', registrants=registrants)
+
+@app.route('/voice/')
+def voice():
+    # Say hi.
+    response = etree.Element('Response')
+    message = etree.Element('Say', voice='alice')
+    message.text = ('Hello, agent. This number has been deprecated for all voice'
+                    ' transmissions. Please contact the game master with any '
+                    'further concerns.')
+    response.append(message)
+    # Stringify
+    response = etree.tostring(response, pretty_print=True)
+    # Responsify
+    response = make_response(response)
+    response.headers['Content-Type'] = 'application/xml'
+    return response
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

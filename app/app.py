@@ -24,10 +24,7 @@ def main():
 def voice():
     # Say hi.
     response = ElementTree.Element('Response')
-    message = ElementTree.SubElement(response, 'Say', attrib={'voice':'alice'})
-    message.text = ('Hello, agent. This number has been deprecated for all voice'
-                    ' transmissions. Please contact the game master with any '
-                    'further concerns.')
+    message = ElementTree.SubElement(response, 'Reject')
     # Stringify
     response = ElementTree.tostring(response)
     # Responsify

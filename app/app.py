@@ -20,7 +20,7 @@ def main():
         registrants = 420
     return render_template('main.html', registrants=registrants)
 
-@app.route('/voice')
+@app.route('/c/voice', methods=['POST'])
 def voice():
     # Say hi.
     response = ElementTree.Element('Response')

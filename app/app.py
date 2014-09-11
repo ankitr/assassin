@@ -79,7 +79,7 @@ def sms():
                             'HELP for help.')
     response = ElementTree.tostring(response)
     response = make_response(response)
-    response.headers['Content-Type'] = 'application.xml'
+    response.headers['Content-Type'] = 'application/xml'
     return response
 
 if __name__ == '__main__':
